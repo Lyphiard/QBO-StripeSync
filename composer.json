@@ -1,0 +1,21 @@
+{
+    "name": "nexril/qbo-stripe",
+    "description": "Sync Stripe transactions with QuickBooks Online",
+    "type": "project",
+    "require": {
+        "quickbooks/v3-php-sdk": "^5.3",
+        "stripe/stripe-php": "^7.14",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "authors": [
+        {
+            "name": "James Wang",
+            "email": "me@james.wang"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "StripeSync\\": "library/"
+        }
+    }
+}
