@@ -18,6 +18,7 @@ QBOValidator::validate();
 
 // Setup Stripe API
 Stripe::setApiKey(Config::get('stripe/secretKey'));
+Stripe::setApiVersion('2016-07-06');
 
 $hasMoreTransactions = true;
 $startingAfter = null;

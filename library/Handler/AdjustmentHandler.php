@@ -17,6 +17,8 @@ class AdjustmentHandler extends Handler
     {
         if (strpos($transaction->description, 'Chargeback withdrawal for ') !== false) {
             return (new ChargebackHandler())->handle($transaction);
+        } else if ($transaction->description === 'Fee Credit') {
+            return (new FeeCreditHandler())->handle($transaction);
         }
 
         return "transaction type '{$transaction->type}' of amount {$transaction->amount} (fee: {$transaction->fee}) is not recognized";
